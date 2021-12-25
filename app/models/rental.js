@@ -7,13 +7,13 @@ export default class RentalModel extends Model {
   @attr owner;
   @attr city;
   @attr location;
-  @attr catetory;
+  @attr category;
   @attr image;
   @attr bedrooms;
   @attr description;
 
   get type() {
-    if (COMMUNITY_CATEGORIES.includes(this.catetory)) {
+    if (COMMUNITY_CATEGORIES.includes(this.category)) {
       return 'Community';
     } else {
       return 'Standalone';
